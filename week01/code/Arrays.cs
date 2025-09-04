@@ -10,15 +10,6 @@
 
 public static class Arrays
 {
-    /// <summary>
-    /// Come up with a plan on how to implement the MultiplesOf function.
-    /// The function should create and return an array of multiples of a number.
-    /// The starting number and the number of multiples are provided as inputs to the function.
-    /// This function will produce an array of size 'length' starting with 'number' followed by multiples of 'number'.
-    /// For example, MultiplesOf(7, 5) will result in: {7, 14, 21, 28, 35}.
-    /// Assume that length is a positive integer greater than 0.
-    /// </summary>
-    /// <returns>array of doubles that are the multiples of the supplied number</returns>
     public static double[] MultiplesOf(double number, int length)
     // public: anyone can use this function
     // static: belongs to the class, not an object
@@ -53,18 +44,14 @@ public static class Arrays
     }
 
 
-    /// <summary>
-    /// Rotate the 'data' to the right by the 'amount'.  For example, if the data is 
-    /// List<int>{1, 2, 3, 4, 5, 6, 7, 8, 9} and an amount is 3 then the list after the function runs should be 
-    /// List<int>{7, 8, 9, 1, 2, 3, 4, 5, 6}.  The value of amount will be in the range of 1 to data.Count, inclusive.
-    ///
-    /// Because a list is dynamic, this function will modify the existing data list rather than returning a new list.
-    /// </summary>
-
-
+// Come up with a plan on how to implement the RotateListRight function.
+// This function receives a list of data and an amount to rotate to the right.
+// For example, if the data is <List>{1, 2, 3, 4, 5, 6, 7, 8, 9} and an amount is 5 then the list after the function runs should be <List>{5, 6, 7, 8, 9, 1, 2, 3, 4}.
+// If the data is <List>{1, 2, 3, 4, 5, 6, 7, 8, 9} and an amount is 3 then the list after the function runs should be <List>{7, 8, 9, 1, 2, 3, 4, 5, 6}.
+// The value of amount will be in the range of 1 and data.Count, inclusive.
     public static void RotateListRight(List<int> data, int amount)
     {        
-       // Step 1: Get the last 'amount' elements.
+    // Step1: Identify the last 'amount' elements in the list that need to move to the front.
        List<int> endElements = data.GetRange(data.Count - amount, amount);
        // List<int>: make a new list of intergers.
        // endElements: name of the new list
@@ -72,12 +59,11 @@ public static class Arrays
        // data.Count - amount: start at the right spot
        // amount: how many elements to get
 
-       // Step 2: Remove thos elements fromt the end.
+    // Step 2: Remove those elements from the end of the list.
        data.RemoveRange(data.Count - amount, amount);
        // data.RemoveRange(...): remove a section from the list.
 
-       // Step 3: Insert those elements at the front.
+    // Step 3: Insert those identified elements to the front of the list.
        data.InsertRange(0, endElements);
        // data.InsertRange(0, ...): put the elements at the start of the list.
-}
-
+   }
