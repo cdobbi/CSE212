@@ -23,3 +23,4 @@
 }
 
 //Big O(n^2)
+//  uses a nested loop structure (like Bubble Sort), which means its Big O notation is O(n²). This describes quadratic time complexity, where the number of operations grows rapidly as the number of elements increases.
