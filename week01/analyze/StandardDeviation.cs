@@ -73,3 +73,9 @@ public static class StandardDeviation
     }
 }
 
+// O(1) is always the best (fastest).
+// O(log n) is next best—grows very slowly.
+// O(n) is next—grows steadily.
+// O(n log n) is a bit worse, but still manageable for large n.
+// O(n²) gets bad quickly as n grows.
+// O(2ⁿ) is the worst—becomes impossible for even moderate n.
